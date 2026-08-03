@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import routes from "./routes/index.js";
 import usersRouter from "./routes/users.js";
+import { connectDatabase } from "./config/database.js";
 
 dotenv.config();
 
@@ -16,6 +17,12 @@ app.use("/users", usersRouter);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`BeautyConnect API running on port ${PORT}`);
-});
+async function startServer() {
+  await connectDatabase();
+
+  app.listen(PORT, () => {
+    console.log(`BeautyConnect API running on port ${PORT}`);
+  });
+}
+
+startServer();
