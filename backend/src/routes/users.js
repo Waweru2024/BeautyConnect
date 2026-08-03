@@ -1,11 +1,8 @@
 import { Router } from "express";
+import { getUsers } from "../controllers/userController.js";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.json({
-    message: "Users endpoint is ready."
-  });
-});
+router.get("/", getUsers);
 
 export default router;
