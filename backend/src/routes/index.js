@@ -1,11 +1,8 @@
 import { Router } from "express";
+import { healthCheck } from "../controllers/healthController.js";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.json({
-    message: "Welcome to the BeautyConnect API"
-  });
-});
+router.get("/", healthCheck);
 
 export default router;
