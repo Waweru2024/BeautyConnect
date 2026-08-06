@@ -1,29 +1,13 @@
 export default function Home() {
   return (
-    <main>
-      {/* Navigation */}
-      <nav>
-        <h1>BeautyConnect</h1>
+    <div className="splash-screen">
+      <div className="logo-box">
+        💇‍♀️
+      </div>
 
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Professionals</a>
-          <a href="#">Login</a>
-        </div>
-      </nav>
+      <h1>BeautyConnect</h1>
 
-      {/* Hero Section */}
-      <section>
-        <h2>Find Trusted Beauty Professionals Near You</h2>
-
-        <p>
-          Book hairstylists, barbers, nail technicians, makeup artists,
-          massage therapists and more across Kenya.
-        </p>
-
-        <button>Book Now</button>
-      </section>
-    </main>
+      <p>Connecting Beauty Professionals Across Kenya</p>
+    </div>
   );
 }
